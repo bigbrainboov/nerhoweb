@@ -1,0 +1,16 @@
+import React from 'react';
+import { PolicyLayout } from './PolicyLayout';
+
+export const PrivacyPage: React.FC = () => (
+  <PolicyLayout title="Nerho Privacy Policy" updated="12 October 2026">
+    <section><h2>1. About This Policy</h2><p>This policy describes the personal information collected by the Nerho app and how to contact Nerho about your privacy. Nerho provides solar, renewable energy, electricals, fittings, plumbing, CCTV, and related products and services.</p></section>
+    <section><h2>2. Information You Provide</h2><ul><li>Email address and password when you create or access your account.</li><li>Phone number for account and service communication.</li><li>Address for the services you request.</li><li>Information you choose to include when contacting our team.</li></ul><p>Please do not send your password in support messages or account deletion requests.</p></section>
+    <section><h2>3. How Your Information Is Used</h2><p>Your account information supports access to Nerho. Your phone number and address support communication and the services you request. Information in a support message is used to respond to that message.</p></section>
+    <section><h2>4. Storage and Security</h2><p>Nerho hosts its backend and stores your account information securely in its database. Keep your login details private and contact our team if you suspect unauthorized access.</p></section>
+    <section><h2>5. Payments and Service Providers</h2><p>Paystack handles Pay Now payments. Information needed to process a payment is handled through Paystack under its <a href="https://paystack.com/terms" target="_blank" rel="noopener noreferrer">Privacy &amp; Cookie Policy</a>. Pay With Zero and Pay With Partner use virtual wallets to support their payment plans.</p><p>For questions about information associated with your payments or virtual wallet, contact <a href="mailto:nerho@gmail.com">nerho@gmail.com</a>.</p></section>
+    <section><h2>6. Analytics and Crash Reporting</h2><p>Nerho does not use analytics or crash reporting services in the app.</p></section>
+    <section><h2>7. Access, Updates, and Privacy Requests</h2><p>Contact <a href="mailto:nerho@gmail.com">nerho@gmail.com</a> to ask about your personal information, request corrections, or raise a privacy concern. Use your registered email address so our team can identify your account.</p></section>
+    <section id="account-deletion"><h2>8. Account and Data Deletion</h2><p>You can request deletion of your Nerho account and associated personal information without installing or signing into the app. Follow the instructions on our <a href="/delete-account">account deletion page</a>. Nerho handles deletion requests immediately after receiving them. Your account and its associated email address, password credentials, phone number, and address are removed from Nerho’s database. Nerho does not retain those account records after deletion. This does not remove records held independently by Paystack, which may retain payment information under its own policy and obligations.</p></section>
+    <section><h2>9. Contact Nerho</h2><p>Email: <a href="mailto:nerho@gmail.com">nerho@gmail.com</a><br />Phone: <a href="tel:+2349127717176">+234 912 771 7176</a></p><p>Visit our <a href="/contact">Contact Us page</a> for our Otokutu and Asaba locations.</p></section>
+  </PolicyLayout>
+);

@@ -1,0 +1,6 @@
+{
+  "name": "Nerho - Essential Sustainable Energy & Home Solutions",
+  "description": "Nerho delivers solar products, electricals, lighting, and home improvement supplies with sustainable energy solutions and flexible financing across Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

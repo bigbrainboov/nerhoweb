@@ -1,0 +1,62 @@
+{
+  "heroImage": {
+    "width": 655,
+    "height": 506
+  },
+  "whyNerho1": {
+    "width": 374,
+    "height": 269
+  },
+  "whyNerho2": {
+    "width": 292,
+    "height": 269
+  },
+  "whyNerho3": {
+    "width": 429,
+    "height": 426
+  },
+  "serviceImg1": {
+    "width": 389,
+    "height": 389
+  },
+  "serviceImg2": {
+    "width": 389,
+    "height": 389
+  },
+  "serviceImg4": {
+    "width": 389,
+    "height": 389
+  },
+  "serviceImg5": {
+    "width": 357,
+    "height": 357
+  },
+  "serviceImg6": {
+    "width": 357,
+    "height": 357
+  },
+  "serviceImg7": {
+    "width": 357,
+    "height": 357
+  },
+  "serviceImg8": {
+    "width": 357,
+    "height": 357
+  },
+  "payWithParthner": {
+    "width": 292,
+    "height": 302
+  },
+  "payWithZero": {
+    "width": 292,
+    "height": 302
+  },
+  "payNow": {
+    "width": 347,
+    "height": 350
+  },
+  "nerhoLogo": {
+    "width": 92,
+    "height": 28
+  }
+}
