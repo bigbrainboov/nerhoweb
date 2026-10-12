@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, MapPin, Phone, Mail, QrCode, Send } from 'lucide-react';
+import { X, Check, MapPin, Phone, Mail, Send } from 'lucide-react';
 import { AppStoreButtons } from './AppStoreButtons';
 
 interface ModalProps {
@@ -9,21 +9,7 @@ interface ModalProps {
 
 // 1. Download the App Modal
 export const DownloadModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [sentSuccess, setSentSuccess] = useState(false);
-
   if (!isOpen) return null;
-
-  const handleSendLink = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (phoneNumber.trim().length >= 10) {
-      setSentSuccess(true);
-      setTimeout(() => {
-        setSentSuccess(false);
-        setPhoneNumber('');
-      }, 3500);
-    }
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
@@ -56,50 +42,9 @@ export const DownloadModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <AppStoreButtons />
           </div>
 
-          {/* QR Code and SMS Link */}
-          <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col sm:flex-row items-center gap-4">
-            <div className="w-20 h-20 bg-white p-2 rounded-xl border border-slate-200 shadow-2xs shrink-0 flex items-center justify-center">
-              <QrCode className="w-full h-full text-slate-900" />
-            </div>
-            <div className="text-xs text-slate-600 space-y-1 text-center sm:text-left">
-              <span className="font-semibold text-slate-900 block">
-                Scan with your phone camera
-              </span>
-              <span>
-                Point your mobile camera at this code to install the Nerho
-                application directly from the store.
-              </span>
-            </div>
-          </div>
-
-          {/* Send SMS Link */}
-          <form onSubmit={handleSendLink} className="space-y-2">
-            <label className="block text-xs font-semibold text-slate-700">
-              Or receive an SMS download link:
-            </label>
-            <div className="flex gap-2">
-              <input
-                type="tel"
-                placeholder="e.g. 0812 345 6789"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                className="flex-1 px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                required
-              />
-              <button
-                type="submit"
-                className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl transition cursor-pointer"
-              >
-                Send Link
-              </button>
-            </div>
-            {sentSuccess && (
-              <p className="text-xs text-emerald-600 font-medium flex items-center gap-1 mt-1">
-                <Check className="w-3.5 h-3.5" /> SMS download link sent
-                successfully!
-              </p>
-            )}
-          </form>
+          <p className="text-xs sm:text-sm text-slate-500">
+            Choose your store above to download the official Nerho app.
+          </p>
         </div>
       </div>
     </div>

@@ -30,10 +30,6 @@ export default function App() {
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const [askAnythingModalOpen, setAskAnythingModalOpen] = useState(false);
 
-  const handleDownloadClick = (platform: 'ios' | 'android') => {
-    console.log(`Initiating download for ${platform}`);
-    setDownloadModalOpen(true);
-  };
 
   return (
     <div className="min-h-screen bg-white text-slate-900 selection:bg-orange-500 selection:text-white flex flex-col font-sans">
@@ -50,7 +46,7 @@ export default function App() {
          path === '/support' ? <SupportPage onAskAnythingClick={() => setAskAnythingModalOpen(true)} /> :
          path === '/contact' ? <ContactPage /> : <>
         {/* 1. Hero Banner Section with Two Phones */}
-        <HeroSection onDownloadClick={handleDownloadClick} />
+        <HeroSection />
 
         {/* 2. What Makes Nerho Different? (Why Nerho) */}
         <WhyNerhoSection />
@@ -69,7 +65,7 @@ export default function App() {
         <JourneySection />
 
         {/* 6. Essentials Banner */}
-        <EssentialsBanner onDownloadClick={handleDownloadClick} />
+        <EssentialsBanner />
 
         </>}
 
@@ -79,7 +75,6 @@ export default function App() {
 
       {/* 8. Download Banner & Footer */}
       <Footer
-        onDownloadClick={handleDownloadClick}
       />
 
       {/* Interactive Modals */}

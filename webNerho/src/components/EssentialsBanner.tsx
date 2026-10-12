@@ -1,13 +1,7 @@
 import React from 'react';
 import { AppStoreButtons } from './AppStoreButtons';
 
-interface EssentialsBannerProps {
-  onDownloadClick: (platform: 'ios' | 'android') => void;
-}
-
-export const EssentialsBanner: React.FC<EssentialsBannerProps> = ({
-  onDownloadClick,
-}) => {
+export const EssentialsBanner: React.FC = () => {
   return (
     <section className="design-section essentials-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +18,7 @@ export const EssentialsBanner: React.FC<EssentialsBannerProps> = ({
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl">From solar and renewable energy to electricals, fittings, plumbing, and CCTV, find what your home or business needs with Nerho. Pay in full, or start with a percentage down payment and spread the balance with a Pay Small Small plan.</p>
 
               <div className="pt-2">
-                <AppStoreButtons onDownloadClick={onDownloadClick} />
+                <AppStoreButtons />
               </div>
             </div>
 

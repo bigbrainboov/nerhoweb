@@ -1,24 +1,15 @@
 import React from 'react';
+import { appLinks } from '../data/appLinks';
 
 interface AppStoreButtonsProps {
-  onDownloadClick?: (platform: 'ios' | 'android') => void;
   className?: string;
   variant?: 'dark' | 'light';
 }
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
-  onDownloadClick,
   className = '',
   variant = 'dark',
 }) => {
-  const handleClick = (platform: 'ios' | 'android') => {
-    if (onDownloadClick) {
-      onDownloadClick(platform);
-    } else {
-      window.open('#download', '_self');
-    }
-  };
-
   const bgClasses =
     variant === 'dark'
       ? 'bg-[#102342] text-white hover:bg-[#1d3761] border border-transparent'
@@ -29,9 +20,10 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   return (
     <div className={`flex flex-wrap items-center gap-3.5 ${className}`}>
       {/* Apple Store Button */}
-      <button
-        type="button"
-        onClick={() => handleClick('ios')}
+      <a
+        href={appLinks.ios}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`flex items-center gap-3 px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow active:scale-98 cursor-pointer ${bgClasses}`}
       >
         {/* Apple Logo SVG */}
@@ -46,12 +38,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
             App Store
           </span>
         </div>
-      </button>
+      </a>
 
       {/* Google Play Button */}
-      <button
-        type="button"
-        onClick={() => handleClick('android')}
+      <a
+        href={appLinks.android}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`flex items-center gap-3 px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow active:scale-98 cursor-pointer ${bgClasses}`}
       >
         {/* Google Play Logo SVG */}
@@ -81,7 +74,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
             Google Play
           </span>
         </div>
-      </button>
+      </a>
     </div>
   );
 };
